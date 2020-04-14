@@ -2,6 +2,7 @@
     "name": "aartikast/contact-package",
     "description": "Custom Pacakge Demo",
     "type": "library",
+    "license": "MIT",
     "authors": [
         {
             "name": "Aarti Kast",
