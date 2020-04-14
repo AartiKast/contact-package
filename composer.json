@@ -1,0 +1,13 @@
+{
+    "name": "aartikast/contact-package",
+    "description": "Custom Pacakge Demo",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Aarti Kast",
+            "email": "aartikast23@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
