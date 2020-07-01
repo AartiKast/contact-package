@@ -24,9 +24,10 @@ class ToDoListServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        $this->publishes([__DIR__.'/views' => base_path('resources/views/vendor/contact-package')]);
         $this->loadViewsFrom(__DIR__.'/views','list');
         $this->loadMigrationsFrom(__DIR__.'/migrations');
         $this->loadRoutesFrom(__DIR__.'/routes.php');
-        $this->publishes([__DIR__.'/config/todolist.php' => config_path('todolist.php')],'todolist-config');
+        $this->publishes([__DIR__.'/src/config/todolist.php' => config_path('todolist.php')],'todolist-config');
     }
 }
