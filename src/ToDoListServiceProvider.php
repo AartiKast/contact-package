@@ -24,9 +24,12 @@ class ToDoListServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->publishes([__DIR__.'/views' => base_path('resources/views/vendor/contact-package')],'views');
         $this->loadViewsFrom(__DIR__.'/views','list');
+        $this->publishes([__DIR__.'/views/list.blade.php' => base_path('resources/views/vendor/contact-package')],'views');
         $this->loadMigrationsFrom(__DIR__.'/migrations');
+        $this->publishes([
+          __DIR__ . '/migrations/2020_03_24_130412_create_demo_users_table.php.stub' => database_path('migrations/' . date('Y_m_d_His', time()) . '2020_03_24_130412_create_demo_users_table.php'),
+        ], 'migrations');
         $this->loadRoutesFrom(__DIR__.'/routes.php');
         $this->publishes([__DIR__.'/src/config/todolist.php' => config_path('todolist.php')],'todolist-config');
     }
