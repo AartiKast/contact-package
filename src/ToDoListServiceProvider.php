@@ -24,7 +24,7 @@ class ToDoListServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->publishes([__DIR__.'/views' => base_path('resources/views/vendor/contact-package')]);
+        $this->publishes([__DIR__.'/views' => base_path('resources/views/vendor/contact-package')],'views');
         $this->loadViewsFrom(__DIR__.'/views','list');
         $this->loadMigrationsFrom(__DIR__.'/migrations');
         $this->loadRoutesFrom(__DIR__.'/routes.php');
